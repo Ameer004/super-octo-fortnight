@@ -2,7 +2,6 @@ import os
 import json
 import time
 from datetime import datetime
-import utils
 from whatsapp_api_client import API
 
 id = "1101778445"
