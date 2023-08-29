@@ -3,7 +3,7 @@ import json
 import time
 from datetime import datetime
 import utils
-from whatsapp_api_client_python import API
+from whatsapp_api_client import API
 
 id = "1101778445"
 token = "cb49bdc0829841e092771f4ad059ed277784102bdaba4bbe93"
@@ -27,13 +27,10 @@ def main():
         chatId = senderData['chatId']
         sender = senderData['sender']
         sName = senderData['senderName']
-        if messageData['typeMessage'] == 'textMessage':
-            txt = messageData['textMessageData']['textMessage']
-            #print(txt)
-            if sName == "Ameer":
-                response = activateApi.sending.sendMessage(sender, "Message text")
-                print(response.data)
-                print('hi')
+        msg = f"Hey {sName}\nAmeer's currently offline 🌑\n\n_*His assistant meera ✍️✍️*_"
+        response = activateApi.sending.sendMessage(sender,msg)
+        print(response.data)
+        print('hi')
 
     activateApi.webhooks.startReceivingNotifications(onEvent)   
 if __name__ == "__main__":
