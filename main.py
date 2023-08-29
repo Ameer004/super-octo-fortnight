@@ -1,7 +1,7 @@
 import json
 import time
 from datetime import datetime
-from whatsapp_api_client import API
+from whatsapp_api_client_python import API
 
 id = "1101778445"
 token = "cb49bdc0829841e092771f4ad059ed277784102bdaba4bbe93"
