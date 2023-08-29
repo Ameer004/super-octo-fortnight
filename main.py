@@ -25,7 +25,7 @@ def main():
         chatId = senderData['chatId']
         sender = senderData['sender']
         sName = senderData['senderName']
-        msg = f"Hey {sName}\nAmeer's currently offline 🌑\n\n_*His assistant meera ✍️✍️*_"
+        msg = f"Hey {sName}\nAmeer's currently offline 🌑\n\n_*~meera ✍️✍️*_"
         response = activateApi.sending.sendMessage(sender,msg)
         print(response.data)
         print('hi')
